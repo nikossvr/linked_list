@@ -137,12 +137,11 @@ void d_elete(pp *h,pp *t)
     {
         if((*h)->next==NULL)
         {
-            temp = *h; printf("e138");
-            (*h)->next = NULL; printf("e139");
+            free(*h);
             *h = NULL; printf("e140");
             *t = NULL; printf("e141");
 
-            free(temp);
+        return;
         }
         if((*h)->next!=NULL)
         {
